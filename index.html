@@ -9,16 +9,16 @@
         <title>Code Quiz</title>
     </head>
     <body>
-         <!---Header with timer and high score link-->
+        
         <header>
             <div id="header">
                 <a id= "score" href="highscore.html">View High Scores</a> 
                 <h2 id="timer"></h2>
             </div>
         </header>
-         <!---Body-->
+         
         <main class="container">
-             <!---Quiz Intro-->
+           
             <div class="row" id= "intro">
                 <h2 class="start">Coding Quiz</h2>
                 <p id="rules">Keep your brain sharp with these coding fundimental questions quiz.
@@ -27,7 +27,7 @@
                     <p id="rules">Keep in mind if you answer a question incorrectly, your score/time will be penalized by ten seconds!</p>
                 <button class="btnStart" id="startBtn" type="submit">Start Quiz!</button>
             </div>
-            <!---Quiz Questions-->
+            
             <div id= "quiz">
                 <div id= "question"></div>
                     <div id= "choices">
@@ -38,14 +38,14 @@
                             <li><button type="button" class="choice option-4 choice-button" id="4" onclick="checkAnswer('4')"></button></li>
                         </ul>
                     </div>
-                 <!---Answer Right or Wrong--->
+                 
                 <div id="answerOutput"> </div>
             </div>
-             <!---Score Info-->
+            
             <div id="finalScore">
                 <h2 id="endMessage">Never Stop Learning!</h2>
                 <div id="result"></div>
-                 <!---Form to enter initials-->
+                
                  <form >
                     <div id="initials">
                         <label for="users" id="name">Enter Initials:</label>

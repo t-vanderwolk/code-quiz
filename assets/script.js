@@ -1,21 +1,21 @@
-// Variable Declarations 
-var header = document.getElementById("header");
-var intro = document.getElementById("intro");
-var quiz = document.getElementById("quiz");
-var question = document.getElementById("question");
-var choices = document.getElementById("choices");
-var choice1 = document.getElementById("1");
-var choice2 = document.getElementById("2");
-var choice3 = document.getElementById("3");
-var choice4= document.getElementById("4");
-var finalScore= document.getElementById("finalScore");
-var endMessage = document.getElementById("endMessage");
-var result = document.getElementById("result");
-var scoreList = document.getElementById("scorelist");
+// letiable Declarations 
+let header = document.getElementById("header");
+let intro = document.getElementById("intro");
+let quiz = document.getElementById("quiz");
+let question = document.getElementById("question");
+let choices = document.getElementById("choices");
+let choice1 = document.getElementById("1");
+let choice2 = document.getElementById("2");
+let choice3 = document.getElementById("3");
+let choice4= document.getElementById("4");
+let finalScore= document.getElementById("finalScore");
+let endMessage = document.getElementById("endMessage");
+let result = document.getElementById("result");
+let scoreList = document.getElementById("scorelist");
 
 
 //The array of questions 
-var questions = [
+let questions = [
     { question: 'One loop inside the body of another loop is called?:', 
     choice1 : "1. loop in a loop",
     choice2 : "2. double loops",
@@ -44,7 +44,7 @@ var questions = [
     choice4 : "4. if else statements",
     correct: "3"
     },
-    { question: "What symbol is used when assigning a value to a variable?", 
+    { question: "What symbol is used when assigning a value to a letiable?", 
     choice1 : "1. &",
     choice2 : "2. ()",
     choice3 : "3. for",
@@ -65,17 +65,17 @@ intro.style.display = "block";
 quiz.style.display = "none";
 finalScore.style.display = "none";
 
-//Variable for Start Quiz Button
-var startBtn = document.getElementById("startBtn");
+//letiable for Start Quiz Button
+let startBtn = document.getElementById("startBtn");
 
 // Listener Event to write password on click of "Start Quiz" button
 startBtn.addEventListener("click", startGame);
 
 
 // Timer Function Begin
-var timeLeft = 75;
-var startScore = 0;
-var timer = document.getElementById("timer");
+let timeLeft = 75;
+let startScore = 0;
+let timer = document.getElementById("timer");
 
 timer.textContent = "Time: " + startScore + "s";
 
@@ -88,7 +88,7 @@ function startGame() {
     finalScore.style.display = "none";
 
 
-    var timeInterval = setInterval(function() {
+    let timeInterval = setInterval(function() {
         timer.textContent = "Time:" + timeLeft + "s";
         timeLeft-=1;
 
@@ -103,11 +103,11 @@ function startGame() {
 };
 
 // Display Questions 
-var lastQuestionIndex = questions.length -1;
-var runningQuestionIndex = 0;    
+let lastQuestionIndex = questions.length -1;
+let runningQuestionIndex = 0;    
 
 function renderQuestion() {
-    var q = questions[runningQuestionIndex];
+    let q = questions[runningQuestionIndex];
     question.innerHTML = q.question;
     choice1.innerHTML = q.choice1;
     choice2.innerHTML = q.choice2;
@@ -146,7 +146,7 @@ function resultRender() {
 
 //Capture Score and Initials 
 userInfo.addEventListener("click", function() {
-    var contactInfo = document.getElementById("contactInfo").value;
+    let contactInfo = document.getElementById("contactInfo").value;
 
     localStorage.setItem("contactInfo", JSON.stringify (contactInfo));
     localStorage.setItem("timeLeft", JSON.stringify(timeLeft));
