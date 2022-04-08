@@ -99,9 +99,9 @@ You are required to submit BOTH of the following for review:
 
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
 
-<!-- Create a timer attached to a button with a starting value of 0
+<!-- Create a timer attached to a button with a starting value of 75
 When timer is pressed start a reverse countdown
-Create a 0 for countdown
+Create a 75 for countdown
 When countdown starts, start quiz
 Start Quiz will be on appended page
 Append the question: choices
