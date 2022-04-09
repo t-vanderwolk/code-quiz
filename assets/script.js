@@ -1,4 +1,4 @@
-// letiable Declarations 
+
 let header = document.getElementById("header");
 let intro = document.getElementById("intro");
 let quiz = document.getElementById("quiz");
@@ -14,7 +14,6 @@ let result = document.getElementById("result");
 let scoreList = document.getElementById("scorelist");
 
 
-//The array of questions 
 let questions = [
     { question: 'One loop inside the body of another loop is called?:', 
     choice1 : "1. loop in a loop",
@@ -60,26 +59,22 @@ let questions = [
     },
 ]  
 
-//Challenge Page
+
 intro.style.display = "block";
 quiz.style.display = "none";
 finalScore.style.display = "none";
 
-//letiable for Start Quiz Button
 let startBtn = document.getElementById("startBtn");
 
-// Listener Event to write password on click of "Start Quiz" button
 startBtn.addEventListener("click", startGame);
 
 
-// Timer Function Begin
 let timeLeft = 75;
 let startScore = 0;
 let timer = document.getElementById("timer");
 
 timer.textContent = "Time: " + startScore + "s";
 
-// Start Game
 function startGame() {
     quiz.style.display = "block";
     question.style.display ="block";
@@ -102,7 +97,7 @@ function startGame() {
     renderQuestion();
 };
 
-// Display Questions 
+
 let lastQuestionIndex = questions.length -1;
 let runningQuestionIndex = 0;    
 
@@ -115,7 +110,7 @@ function renderQuestion() {
     choice4.innerHTML = q.choice4;
 };
 
-// Check Answers
+
 function checkAnswer(answer) {
     if(questions[runningQuestionIndex].correct == answer) {
         answerOutput.textContent = "Correct!"
@@ -126,14 +121,14 @@ function checkAnswer(answer) {
     }
 
     if (questions.length === runningQuestionIndex+1) {
-        resultRender(); // If it has gone through all questions, show final score
+        resultRender(); 
         return;
     }
         runningQuestionIndex++;
         renderQuestion();
     };   
 
-//Score Quiz
+
 function resultRender() {
    quiz.style.display = "none";
    intro.style.display = "none";
@@ -144,7 +139,7 @@ function resultRender() {
    }
 };
 
-//Capture Score and Initials 
+
 userInfo.addEventListener("click", function() {
     let contactInfo = document.getElementById("contactInfo").value;
 
